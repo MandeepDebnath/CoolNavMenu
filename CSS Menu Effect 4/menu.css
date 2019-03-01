@@ -1,0 +1,125 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: rgb(27, 27, 23);
+}
+
+.wrapper{
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+ul{
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+}
+
+ul li{
+    list-style: none;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: 0.2s;
+}
+
+ul li a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 20px;
+    transition: 0.2s;
+    position: relative;
+}
+
+ul:hover li a{
+    transform: scale(1.5);
+    opacity: 0.2;
+    padding: 10px;
+    filter: blur(5px);
+    transform: rotate(30deg);
+}
+
+ul li a:hover{
+    transform: scale(1.5);
+    opacity: 1;
+    filter: blur(0);
+    color: white;
+}
+
+ul li a span:first-child:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 10px;
+    background: transparent;
+    border-top: 4px dotted white;
+    border-left: 4px dotted white;
+    transition: 0.2s;
+    opacity: 0;
+}
+ul li a span:first-child:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 8px;
+    height: 10px;
+    background: transparent;
+    border-top: 4px dotted white;
+    border-right: 4px dotted white;
+    transition: 0.2s;
+    opacity: 0;
+}
+
+ul li a span:last-child:before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 8px;
+    height: 10px;
+    background: transparent;
+    border-bottom: 4px dotted white;
+    border-left: 4px dotted white;
+    transition: 0.2s;
+    opacity: 0;
+}
+ul li a span:last-child:after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 8px;
+    height: 10px;
+    background: transparent;
+    border-bottom: 4px dotted white;
+    border-right: 4px dotted white;
+    transition: 0.2s;
+    opacity: 0;
+}
+
+ul li a:hover span:first-child:before{
+    opacity: 1;
+    transform: scale(1.2);    
+}
+ul li a:hover span:first-child:after{
+    opacity: 1;
+    transform: scale(1.2);
+}
+ul li a:hover span:last-child:before{
+    opacity: 1;
+    transform: scale(1.2);
+}
+ul li a:hover span:last-child:after{
+    opacity: 1;
+    transform: scale(1.2);
+}
